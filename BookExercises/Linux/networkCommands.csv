@@ -1,0 +1,61 @@
+scp [filename] [user@remotehost.com:/remotedir], secure copy local to remote host
+scp [user@remotehost.com:/remotedir] [filename], secure copy remote to local host
+scp -r [directory] [user@remotehost.com:/remotedir], secure copy local directory to remote host
+rsync -zvr [directory] [user@remotehost.com:/remotedir], remote copy/sync verbose recursive and compressed file
+rsync -zhr [user@remotehost.com:/remotedir] [directory], remote copy/sync from remote to local compressed human-readable recursive directory
+rsync [local1] [local2], remote sync/copy from local directory to other local directory
+python -m SimpleHTTPServer, python quick local server that other machines can access
+sudo service nfsclient start, start simple network file share NFS
+samba, Secure message block protocol for network file share between Linux and Windows
+ifconfig -a, list all available network interfaces
+ifconfig -s, list all network interfaces in a short list
+ifconfig, allows us to configure our network interfaces
+eth0, first ethernet card
+wlan0, wireless interface
+lo, loopback interface (represents your computer)
+sudo route -n, show routing table 
+ifup [interface], bring up an interface
+ifdown [interface], bring down an interface
+ip link show, show network interface info for all interfaces
+ip -s link show [interfacename], show statistics of a network interface
+ip, command that allows us to manipulate networking stack of a system -- preferred method of network settings manipulation
+ip address show, show ip addresses allocated to network interfaces
+ip link set [interface] up, bring ip network interface up
+ip link set [interface] down, bring ip network interface down
+ip address add [ip address] dev [interface], add an ip address to a network interface
+sudo route add -net [ip/netmask] gw [local], add a new route
+ip route add  [ipaddress] via [local], add a new route
+sudo route del -net [ipaddress], delete a route
+ip route delete [ipaddress] via [local], delete a route
+ip route delete [ipaddress], delete a route
+sudo dhclient, uses DHCP (Dynamic Host Configuration Protocol) to get fresh ip address
+nm-tool, reports network manage's state and it's devices
+nmcli, allows you to control and modify Network Manager
+arp, allows you to see locally stored ARP cache on your system (empty on boot)
+ip neighbour show, see locally stored ARP cache on system with ip command
+ICMP type 0, echo reply
+ICMP type 3 code 1, destination unreachable and host unreachable
+ICMP type 3 code 0, destination unreachable and network unreachable
+ICMP type 8, echo request
+ICMP type 11, time exceeded
+ping -c 3 [destination], send 3 echo request packets to destination like www.google.com
+netstat -at, shows listening and non-listening sockets for only TCP network connections
+netstat -l, show listening or open ports
+netstat --listen, show all listening or open ports
+netstat -vaun, show open UDP ports
+netstat -vatn, show open TCP ports
+netstat -vat, show full DNS hostnames
+wireshark, fully featured packet analyzer
+tcpdump, linux based packet analyzer
+nslookup [hostname], name server lookup tool used to query name servers to find info about resource records
+dig [hostname], domain information grouper...tool for getting info about DNS name servers great for troubleshooting DNS issues
+dig A [hostname], outputs the name of the record..the TTL and the IPv4 address
+dmesg, command that allows you to see the /var/log/dmesg file
+traceroute, means of showing how packets are getting route...builds list of routers that the packets traverse until it gets an ICMP echo reply message..uses TTL of +1 for each router until reply
+c
+telnet,
+curl, command for downloading info from the internet that lets you use wild cards cannot recover from failures can specify multiple urls in one command
+wget, download files from networks...can be used to recursively download files can recover from failures
+curl ifconfig.me, output public IP address
+ip addr show [interface], show Private IP address
+hostname -I, output private IP addresses

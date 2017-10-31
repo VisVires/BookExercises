@@ -1,0 +1,35 @@
+cut -c 5 [filename], output 5th character in each line
+cut -f 2 [filename], output 2nd field (field denoted by -f and default delimiter is tab)
+cut -f 1 -d "[delimiter]" [filename], output field with new delimiter
+cut -c 5-10 [filename], output range of characters from 5 to 10
+cut -c -5 [filename], get first 5 characters from file
+paste -s [filename], paste file.. works like cat..default delimiter is tab
+paste -s -d "[delimiter]" [filename], paste file change delimiter
+head [filename], shows first 10 lines of a file
+head -n [number] [filename], shows first number lines of a file
+tail [filename], shows last 10 lines of a file
+tail -n [number], shows last number lines of a file
+expand [filename], change tabs to spaces
+unexpand [filename], changes spaces to tabs
+join [filename1] [filename2], join files by common fields
+join -1 2 -2 1 [file1] [file2], join file -1 and file -2 at fields 2 and 1 respectively
+split [filename], split file into separate files
+sort [filename], sort lines in file
+sort -r [filename], sort lines in file in reverse
+sort -n [filename], sort lines in file by numerical order
+tr [a-z] [A-Z], translate items in file from lower case to upper case
+uniq [filename], outputs unique lines only
+uniq -c [filename], count occurances of each line
+uniq -u [filename], just get unique values
+uniq  -d [filename], get duplicates only (you must sort first as they need to be adjacent)
+wc [filename], show count of lines words and bytes
+wc -l [filename], show count of lines
+wc -w [filename], show count of words
+wc -c [filename], show count of bytes
+nl [filename], output numbered lines on a file
+grep [characters] [filename], search files for characters that follow certain patterns
+grep -i [characters] [filename], search files for characters that follow certain case insentitve patterns, also use regex
+grep -E, unknown
+grep -F, unknown
+Vim, improved vi
+

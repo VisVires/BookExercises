@@ -37,9 +37,11 @@ int main(int argc, char **argv){
     //cout << "Filename is: " << fileName << endl;
 
     myfile.open(fileName);
-    newfile.open("wrong.csv");
+    string newname = "wrong"+fileName;
+    newfile.open(newname);
 
     while(myfile){
+        cout << fileName << endl;
         string command, definition;
         getline(myfile, command, ',');
         getline(myfile, definition);

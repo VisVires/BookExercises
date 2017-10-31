@@ -1,0 +1,99 @@
+pwd,print current directory
+cd [directory location],change directory
+ls,list directories
+ls -la,list directories long format
+touch [filename],create new file
+file [filename],output file type
+cat,concatenate files or output file contents to standard output
+less,make output more manageable
+history,show all previous commands
+!!,repeat previous command
+!-[x],repeat command x commands back
+cp [filename] [destination],copy file from location to directory 
+cp -r [filename] [destination],copy directory from location to directory
+cp -i [filename] [destination],copy file from location to directory with interactive
+mv [filename] [destination],move file from local to destination
+mv [filename] [newfilename], change file name
+mv -i [filename] [destination], interactive file move or rename
+mv -b [filename] [destination], create backup with move that starts with ~
+mkdir [dirname],make directory
+mkdir [dir1] [dir2],make multiple directories
+mkdir -p [dir/path/and/subs],make directory and subdirectories
+rm [file], remove file
+rm -rf [directory], force remove directory
+rm -f [file], force remove file
+rm -i [file], interactive remove file
+rmdir [dirname], remove directory
+find [directory] -name [filename], find file in directory with name
+help [command],bash builtin commands that get help with command
+[command] --help,get help with command alternative
+man [command],man pages for command
+whatis [command],brief description of command
+alias [aliasname]=[command], bash built-in command that gives common command an alias name
+alias, bash built in command outputs list of aliases to standard output in a form that allows them to be reused as input
+unalias [aliasname], bash builtin command that unaliases aliased command if -a flag set all aliases removed
+exit,leave terminal
+logout,bash builtin command logout user returning a status of n to the shells parent
+echo [-neE] [phrase], bash builtin command output item to sdout
+echo > [filename], output item and replace current text in filename
+echo >> [filename], append to text currently at filename
+<,redirect to stdin
+2>, write to stderr
+2>&1,write to stderr and stdout
+&>,write to stdout
+[command] | [outfile], redirect output of one command as input to another
+[command] | tee [outfile], redirect output of one command as input to another along with other outputs like to stdout
+env, output enviromental variables
+sudo, run command with root access
+su, substitute users and open a root shell to run everything as root
+gzip [filename], compress file with gzip
+gunzip [filename].gz, decompress gzip file
+tar cvf [filename].tar [file1] [file2], adds multiple files to an archive (gzip can't do this) c - create v- verbose f-filename
+tar czf [filename].tar.gz, create compressed tar file with z flag for gzip
+tar xzf [filename].tar, uncompress and unpack or extract all files
+rpm -i [packagename].rpm, install redhat package
+rpm -e [packagename].rpm, remove redhat package
+rpm -qa, query all or list redhat packages 
+dpkg -i [packagename].deb, install debian package
+dpkg --install [packagename].deb, install debian package
+dpkg -r [packaagename].deb, remove debian package
+dpkg -l, list debian packages
+yum install [packagename], install redhat command
+yum erase [packagename], erase redhat command
+yum update, redhat update
+yum info [packagename], get info about package redhat command
+apt install [packagename], install debian package command
+apt remove [packagename], remove debian package command
+apt update or apt upgrade, update or upgrade debian package command
+apt show [packagename], get info about package debian command
+sudo apt install build-essentials, get build tools
+dd if=[1stdir] of=[2nddir] bs=[num], convert and copy data from if (input file) to of(output file) with bs bytes can use k for kilobyte and m for megabyte
+ls -li, list files with inode in first field
+stat[directory/filename], list inode for file or directory and other info
+ln [filename] [hardlinkname], create hardlink to file
+ln -s [filename] [linkname], create symbolic link for file
+sudo shutdown -h now, shut down now
+sudo shutdown -h +2, shut down in two minutes
+sudo shutdown -r now, restart with shutdown command
+unlink, remove file from inode..cannot do this with directories
+setenv, view and edit enviroment from csh or tcsh
+unsetenv, view edit enviroment variables in csh or tcsh
+&, flag to start program in the background
+bind -l, bash built in command that list names of all Readline funcitons
+bind -p. bash built in command that displays Readline function names and bindings in a wat that they can be used as input
+builtin [shell builtin[args]], runs a shell builin passing it args and returning its exit status
+caller [expr], bash builtin command that returns the context of any active subroutine call
+command [-pVv] command [args], bash built in function that runs command with arguments ignoring any shell function named command
+gsettings set org.gnome.desktop.background picture-uri "file:///home/username/path/to/image.jpg"
+declare [-aAfFgilnrtux] [-p] [name], bash built in function that declares variables and gives them attributes
+enable [-a] [-dnps] [-f filename] [name], bash builtin command that enables and disable builtin shell commands
+let [expression], bash builtin command that allows arithmetic to be performed on shell variables
+local [option] [name]=[value], bash builtin function that creates a local variable and assigns ita value
+mapfile, bash builtin command that reads lines from standard input into an indexed array variable array or from file descriptor fd if the -u option is supplied
+printf [-v var] format [args], bash builtin that write the formatted args to standard output -v causes the output to be assigned to var rather than being printed to stdout
+read [-ers] [-a aname] [-d delim] [-i text] [-n nchars] [-N nchars] [-p prompt] [-t timeout] [-u fd] [name], bash builtin command where one line is read from stdin or from fd and split into words each assigned to the name
+readarray [-d delim] [-n count] [-0 origin] [-s count] [-t] [-u fd], bash builtin command where lines are read from stdin into the indexed array or from fd...synonomy for mapfile
+source [filename], bash builtin synonym for "."
+type [-afptP] [name], bash builtin command that for each name indicates how it would be interprested if used as a command name
+typeset [-afFgrxilnrtux] [-p] [name[=value]], bash builtin command for compatibility with Korn shell ... synonym for declare command
+

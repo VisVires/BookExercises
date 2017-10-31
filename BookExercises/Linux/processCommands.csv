@@ -1,0 +1,45 @@
+ps, output snapshot of current processes
+ps a , list all processes with a terminal (tty)
+ps ax , list all processes 
+ps aux , list all processes under current user
+SIGABRT, sent to abort a process and force a core dump
+SIGALARM, the alarm clock has gone off
+SIGFPE, a floating point error has occured (like division by 0)
+SIGILL, user has hit DEL key to interrupt the process
+SIGQUIT, user has hit the key requesting a core dump
+SIGPIPE, a process has written to a pipe with no readers
+SIGHUP, Hang up signal
+SIGKILL, Kill signal
+SIGINT, Interrupt signal
+SIGSEGV, segmentation fault signal invalid memory address
+SIGTERM, Software termination signal
+SIGSTOP, Stop signal
+kill [PID] , calls sigterm to kill a process
+kill -9 [PID], cal sigkill on a process
+kfork, used to kill programs
+top, show top processes running in real time
+nice -n 5 apt upgrade, use nice to change/set niceness/priority of a new process
+renice 10 -p [PID], set niceness/priority of an existing process
+STAT R, Running STATUS
+STAT S, Interupptable sleep STATUS
+STAT D, Uninteruptable sleep STATUS
+STAT Z, Zombie STATUS
+STAT T, Process is suspended or stopped STATUS
+jobs, shows all jobs sent to background with job id and a + by the most recent and - by second
+bg, send process to background after ctrl-z for SIGSTOP
+fg %[JobID], bring background job forward or most recent
+kill %[JobID], kill process with job id
+strace ls, check system calls made by ls
+top, realtime utilization of system resources
+top -p 1, get utilization info of init
+top -p [PID], get utilization info of specific process
+lsof, see what is in use by a process...stands for list open files
+lsof -i, display list of open ports
+fuser -v, verbose information about the process that is using a file or file user
+ps m, view process threads
+uptime, cpu monitoring command how long has system been running and average number of runnable processes over several different periods of time (1 5 and 15 minutes) if longer than 2 processes there is a bottleneck
+ulimit [-HSabcdefiklmnpqrstuvxPT] [limit], bash builtin command that provides control over the resources available to processes started by the shell, on systems that allow such control
+htop, shows memory of current processes
+free, shows available memory can add -k or -m to specify the unit
+dmidecode, gives info about the installed RAM memory
+dmidecode -t [type], gives specific info about installed stuff

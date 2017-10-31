@@ -1,0 +1,82 @@
+visudo, opens /etc/sudoers file which lists who can run sudo
+root, most powerful user on the system
+adduser, makes a home directory for a new user (1 of 2)
+useradd, makes a home directory for a new user (2 of 2)
+sudo adduser [user], makes an entry in /etc/passw for user and sets of a default group and entry in /etc/shadow
+sudo userdel [user], removes user from /etc/passw and entry in /etc/shadow
+passwd [user], change your or another users password
+chmod ug+w [filename], add write privliges to user and group
+chmod 755 [filename], give user full access .. group and others read and execute permissions
+chmod go-w [filename], remove write permissions from group and others
+sudo chown [username] [filename], change user for file
+sudo chgrp [groupname] [filename], change group for file
+sudo chown [username]:[groupname] [filename], change user and group for a file
+umask 022 [filename], remove write permissions from group and others
+sudo chmod u+s [filename], allows user who launched program to get owners permissions and execution permissions
+sudo chmod 4755 [filename], numberical means of setuid so user who launched gets owner permissionsudo chmod g+s [filename], allows group who launched to get owners permissions and execution permission
+sudo chmod 2555 [filename], numberical means of setguid if "S" it doesn't have execute permissionsudo chmod +t [dir/filename], sticky bit symbolic only owner can delete or modify file
+sudo chmod 1755 [dir/filename], numberical sticky bit only owner can delete or modify file
+udevadm info --query=all --name=[devicename], view device info
+lsusb, list usb devices
+lspci, list pci devices
+lsscsi, list scsi devices
+df -T, reports file system disk usage and other details including -T or type
+fdisk, command line partitioning tool
+sudo parted -l, show info about MBR file system
+parted, command line tool that supports MBR and GPT partitioning
+gparted, GUI version of parted
+gdisk, command line partitioning tool that only supports GPT
+sudo mkfs -t ext4 /dev/sdb2, make file system of type ext4 at point /dev/sdb2
+sudo mount -t ext4 [driveLocation] [mountPoint], mount ext4 file system type to destination at mount point
+sudo unmount [drivelocation/name] or sudo unmount[mountPoint], unmount filesystem
+sudo blkid, output universally unique ids for block devices
+sudo mount UUID=[uuid] [mountPoint], mount universally unique id
+mkswap /dev/sdb2, initialize swap area
+swapon /dev/sdb2, enable swap device
+swapoff /dev/sdb2, remove swap
+df -h, show utilization of currently mount filesystem and make -human readable
+du -h, show disk usage of current directory
+du, returns total in kb of the specified directory
+df, displays unused space in directory
+sudo fsck [filesystemname], check consistency of filesystem and repair it
+df -i, show number of inodes left on the system
+uname -r, print system info with kernel release version
+sudo apt dist-upgrade, get updated version of distro
+lsmod, list currently loaded modules
+sudo modprobe bluetooth, load bluetooth module try module from /lib/modules/(kernelver)/kernel/drivers
+sudo modprobe -r bluetooth, remove bluetooth module
+service --status-all, list services in System V init implementation
+sudo service networking state, start a service in System V init implementation
+sudo service networking stop, stop a service in System V init implementation
+sudo service networking restart, restart a service in System V init implementation
+ls /etc/init, see list of jobs in System V
+initctl list, view jobs in Upstart init system
+initctl status [job name], view specific jon info in Upstart init system
+sudo initctl start [jobName], manually start a job in Upstart init system
+sudo initctl stop [jobName], manually stop a job in Upstart init system
+sudo initctl restart [jobName], restart networking in Upstart init system
+ls /etc/init, see list of jobs in Upstart init system
+sudo systemctl list-units, list units in Systemd init implementation
+sudo systemctl status [unitName].service, view status of a service in Systemd init
+sudo systemctl start [unitName].service, start a service in Systemd init
+sudo systemctl stop [unitName].service, stop a service in Systemd init
+sudo systemctl restart [unitName].service, restart a service in Systemd init
+sudo systemctl enable [unitName].service, enable a unit in Systemd init
+sudo systemctl disable [unitName].service, disable a unit in Systemd init
+sudo sar -q, list details from the start of the day
+sudo sar -r, list details of memory usage from the start of the day
+sudo sar -p, list details of CPU usage
+crontab -e, edit the crontab file
+hsh, change shell
+script,
+trap [code to execute] [list of signals], command to catch signals and clean up
+lpr, reads in the file and hands the printable data over to the linux printing daemon lpd
+mknod, command to make FIFO file or node
+mkfifo, command to make FIFO file
+id, command that prints out your user and group ids
+sudo telinit [Number], change run level
+iostat, output CPU utilization and device utilization and network filesystem report
+vmstat, virtual memory monitoring report
+vmstat -s, lays out the memory usage stats
+
+
