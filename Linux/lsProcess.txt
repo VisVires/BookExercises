@@ -1,0 +1,35 @@
+1. User writes command into stdin of shell which is waiting with getline() function
+1 - 2?. Shell checks if command is an alias? shell checks if command exists in path?
+2. Shell calls fork() system call
+    2.1 system call executes in kernel mode and each has a number associated with it
+    2.2 when user program makes system call a library routine is called
+    2.3 library routine issues a trap to linux OS by executing 0x80 assembly instruction it also send system call number to kernel using EAX register
+    2.4 Arguments are sent to other registers
+    2.5 kernel executes the system call and returns the result to the user progra using a register
+3. fork() creates two identical copies of the address space one for the parent and one for the child..
+4. fork() allocates the task structure and fills it from parent
+5. Child's stack and user area is allocated and filled from parent
+6. Childs PID is allocated
+7. Child is set up to share parents text and copies page tables and stack
+8. Parent shares open files with parent and copies registers to child
+9. New shell is created
+10. shell checks if ls is an alias if so it replaces it with the value
+11. stat() is called then vfs_stat() which both wrap the following
+12. search_for_command() c function is called which calls find_user_command_in_path() (find_user_command_internal() fails first)
+12. shell looks for ls by tokenizing and parsing then searching throught the PATH enviromental variable using ':' as the delimiter using find_in_path_element()
+13. execve() verifies execute permissions for the commnand
+14. execve(command, args, NULL) uses args
+14. shell reads and verfies the header
+15. arguments are copied and evironment is copied
+16. new address space is allocated
+17. Registers are initialized
+18. ls process is started and replaces shell
+19. openat() used open the current directory or directory listed 
+    Normally opendir(3) is used though
+20. directory data read using getdents() system call then closes file descriptor when done reading
+    Normally readdir(3) is used here - returns pointer to a structure represent te directory entry
+19. stat() with arg of item - works and finds file name and info
+    Normally closedir(3) is used here 
+20. lstat() with arg of items - checks if its  a symbolic link
+21. fstat() with arg of items - is verified file
+22. write items to stdout from kernel

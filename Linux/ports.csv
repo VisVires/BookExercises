@@ -1,0 +1,15 @@
+20, FTP Data Transfer
+21, FTP Control
+22, SSH
+23, Telnet
+25, SMTP
+67/68, DHCP
+69, TFTP (Trivial File Transfer Protocol)
+80, HTTP
+110, POP3
+123, NTP
+143, IMAP
+179, BGP (Border gateway protocol)
+443, HTTPS
+989, FTP over TLS/SSL Data Transfer
+990, FTP over TLS/SSL Control

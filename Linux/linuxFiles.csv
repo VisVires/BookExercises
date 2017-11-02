@@ -2,19 +2,19 @@
 /bin, ready to run programs (binaries) are stored here
 /boot, contains kernel boot loader files
 /boot/grub/grub.conf or /etc/grub.conf, grub config file contains kernel and initrd image
-Btrfs filesystem, high performance journaling file system, great for system with large files
+Btrfs filesystem, high performance journaling file system... great for system with large files
 config, kernel configuration settings file
 default.target, defualt boot goal for systemd normally graphical.target
 /dev, device files
 /dev directory, shows devices and device drivers (ls- /dev)
 /dev/hda, first PATA device found on older systems
 /dev/hdd2, second partition on fourth PATA disk
-/dev/null, device that accepts and discards all input, produces no output
+/dev/null, device that accepts and discards all input produces no output
 /dev/random, device that produces random numbers
 /dev/sda3, 3rd partion of first scsi/harddisk
 /dev/sda, SCSI device (first scsi)
 /dev/sdb, SCSI device second harddisk
-/dev/zero, device that accepts and discards all input, produces stream of NULL bytes
+/dev/zero, device that accepts and discards all input... produces stream of NULL bytes
 dhclient.conf, file that DHCP gets list of netowrk interfaces from
 dhclient.leases, file that DHCP uses to keep track of leases across system reboots
 /etc/apt/sources.list, list of preapproved sources to get packages from on debian
@@ -61,7 +61,7 @@ reboot.target, restart file goal for systemd
 rescue.target, single user mode goal file for systemd
 /root, root directory
 /run, info about running systems since last boot
-/sbin, contains essential system binaries, can only be run by root
+/sbin, contains essential system binaries.... can only be run by root
 .service , service units...services we've been starting and stopping in systemd
 /srv, site specific data which are served by the system
 sysfs, virtual file system mounted to /sys used to view info and manage devices including info about manufacturer.. model..where it is plugged in..state..heirarchy..just manage devices here not like /dev
@@ -69,11 +69,11 @@ system.map, symbolic lookup table for the kernel
 /sys, virtual file system mounted here
 .target , groups other units in systemd
 /tmp, storage for temp files
-/usr/bin,
-/usr, does not contain user files, meant for installed software and ultities 
+/usr/bin, user bindar files
+/usr, does not contain user files meant for installed software and ultities 
 /usr/lib/systemd, init file that exists in Systemd init implementations
 /.usr/lib/systemd/system, config file for systemd
-usr/local,
+usr/local, local directory for variety of config and binaries
 /usr/local/bin/bash, BASH or Bourne-again shell
 /usr/local/bin/tcsh, Enhanced C-Shell
 /usr/share/upstart, init file that exists in Upstart init implementations
