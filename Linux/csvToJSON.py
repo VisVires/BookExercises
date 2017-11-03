@@ -12,7 +12,7 @@ def main(argv):
     defineDict = {}
 
     for line in data:
-        command, define = line.strip().split(',')
+        command, define = line.strip().split(', ')
         defineDict[command] = define
 
     inFileName = csv.replace(".csv", "")
